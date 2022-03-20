@@ -31,8 +31,12 @@ jobs:
 
     - name: Netlify Deploy
       # uses: jsmrcaga/action-netlify-deploy@v1.7.1
-
+      uses: netlify/actions/cli@master
+      
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      run: netlify deploy --prod
+      
+      with:
+          args: deploy --dir=build --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
