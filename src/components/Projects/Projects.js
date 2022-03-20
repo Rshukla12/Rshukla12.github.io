@@ -12,25 +12,33 @@ const projects = [
     imgPath: Udemy,
     title: "Udemy Clone",
     description: "Udemy is a platform that allows instructors to build online courses on their preferred topics build with React.js, Redux, Material-UI, Node, Express and MongoDB. Have features which allows user to wishlist, add to cart, purchase, watch and review courses.",
-    link: "https://github.com/anamikarec/udemy.com-project"
+    link: "https://github.com/anamikarec/udemy.com-project",
+    demo: "https://udemy-triage-project.netlify.app",
+    stack: ["react", "redux", "mui", "node", "mongodb", "express", "git"]
   },
   {
     imgPath: Meesho,
     title: "Meesho Clone",
     description: "Meesho is an indian e-commerce company, using this clone user can login, search and see products, add them to cart and purchase them.",
-    link: "https://github.com/rshukla12/meesho"
+    link: "https://github.com/rshukla12/meesho",
+    demo: "https://meesho-by-nitrogen.netlify.app",
+    stack: ["react", "redux", "mui", "git"]
   },
   {
     imgPath: YtMusic,
     title: "YouTube Music Clone",
     description: "Youtube music allows user to play any song, search for any artist, song, playlist and add it to the library. Library will persist only for few hours as it is maintained using heroku and mock- server.",
-    link: "https://github.com/rajachoudhary/Youtube_Music"
+    link: "https://github.com/rajachoudhary/Youtube_Music",
+    demo: "https://yt-music-masters.netlify.app",
+    stack: ["javascript", "node", "html", "css", "git"]
   },
   {
     imgPath: Airtable,
     title: "Airtable Clone",
     description: "UI clone of Airtable, a cloud-based software company that offers an online platform for creating and sharing relational databases.",
-    link: "https://github.com/charandas31/Airtable_Clone"
+    link: "https://github.com/charandas31/Airtable_Clone",
+    demo: "https://rshukla12.github.io/Airtable_Project2/",
+    stack: ["javascript", "html", "css", "git"]
   }
 ];
 
@@ -49,7 +57,7 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           {
             projects.map(project => (
-              <Col md={5} className="project-card">
+              <Col md={8} className="project-card">
                 <ProjectCard
                   key={project.title}
                   {...project}
