@@ -31,7 +31,7 @@ jobs:
 
     - uses: "finnp/create-file-action@master"
       env:
-        FILE_NAME: "build/_redirects"
+        FILE_NAME: "Build/_redirects"
         FILE_DATA: "/* /index.html 200"
         
     - name: Netlify Deploy
