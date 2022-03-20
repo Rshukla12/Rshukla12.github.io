@@ -459,7 +459,7 @@ html {
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   color: white !important;
   background-color: transparent !important;
-  opacity: 0.9 !important;
+  opacity: 1 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
@@ -704,4 +704,36 @@ p {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+.project-div {
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.3) !important;
+  max-width: 750px;
+  margin: 20px auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: flex-start;
+  transition: all .3s ease-in-out;
+  background-color: transparent !important;
+  position: relative;
+}
+
+.project-card:hover .glass {
+  backdrop-filter: blur(0px);
+}
+
+.project-card .skill {
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  font-size: 2rem;
+}
+
+.project-card .tech-icons {
+  width: 3rem !important;
+  height: 3rem !important;
+  min-height: 3rem !important;
+  min-width: 3rem !important;
+  padding: 0 !important;
 }
