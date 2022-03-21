@@ -464,7 +464,7 @@ html {
   height: 100% !important;
 }
 .project-card-view:hover {
-  transform: scale(1.02) !important;
+  filter: brightness(1.02);
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
@@ -721,7 +721,7 @@ p {
 }
 
 .project-card:hover .glass {
-  backdrop-filter: blur(0px);
+  backdrop-filter: blur(5px);
 }
 
 .project-card .skill {

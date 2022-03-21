@@ -61,7 +61,7 @@ function ProjectCards(props) {
           {
             props.stack?.map(s => (
               <Col key={s} xs={4} md={1} className="tech-icons">
-                <div class="skill glass light">
+                <div className="skill glass light">
                   { map[s] }
                 </div>
               </Col>

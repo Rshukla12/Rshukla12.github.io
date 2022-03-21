@@ -5,9 +5,10 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import About from "../About/About";
-import Projects from "../Projects/Projects";
 import { useParams } from "react-router-dom";
-import Skills from "../Skills/Skills";
+import loadable from '@loadable/component'
+const Skills = loadable(() => import('../Skills/Skills'));
+const Projects = loadable(() => import('../Projects/Projects'));
 
 function Home() {
   const {id} = useParams();
@@ -46,10 +47,10 @@ function Home() {
           </Row>
         </Container>
       </Container>
+      <Home2 />
       <About />
       <Skills />
       <Projects/>
-      <Home2 />
     </section>
   );
 }

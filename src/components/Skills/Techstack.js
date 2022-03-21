@@ -72,7 +72,7 @@ function Techstack() {
         {
           frontendStacks.map(stack => (
             <Col key={stack.label} xs={4} md={2} className="tech-icons">
-              <div class="skill glass light">
+              <div className="skill glass light">
                 {stack.icon}
                 <p>{stack.label}</p>
               </div>
@@ -88,7 +88,7 @@ function Techstack() {
         {
           backendStacks.map(stack => (
             <Col key={stack.label} xs={4} md={2} className="tech-icons">
-              <div class="skill glass light">
+              <div className="skill glass light">
                 {stack.icon}
                 <p>{stack.label}</p>
               </div>
