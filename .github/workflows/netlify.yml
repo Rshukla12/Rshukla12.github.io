@@ -29,10 +29,9 @@ jobs:
 
     - run: npm run build --if-present
 
-    - uses: "finnp/create-file-action@master"
-      env:
-        FILE_NAME: "build/_redirects"
-        FILE_DATA: "/* /index.html 200"
+    - name: Create File 
+      run: |
+        echo "/* /index.html 200" > ./build/_redirects
         
     - name: Netlify Deploy
       # uses: jsmrcaga/action-netlify-deploy@v1.7.1

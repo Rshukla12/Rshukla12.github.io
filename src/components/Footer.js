@@ -5,8 +5,6 @@ import { SiLeetcode } from "react-icons/si";
 import { FaLinkedinIn, FaHackerrank } from "react-icons/fa";
 
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
   return (
     <Container fluid className="footer">
       <Row>

@@ -25,14 +25,14 @@ function NavBar() {
     }
   }
 
-  window.addEventListener("scroll", scrollHandler);
+  // window.addEventListener("scroll", scrollHandler);
 
   return (
     <Navbar
       expanded={expand}
       fixed="top"
       expand="md"
-      className={navColour ? "sticky" : "navbar"}
+      className={navColour ? "sticky" : "navbar sticky"}
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">

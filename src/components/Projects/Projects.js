@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
+// import Particle from "../Particle";
 import Udemy from "../../Assets/Projects/udemy.jpg";
 import Meesho from "../../Assets/Projects/meesho.jpg";
 import YtMusic from "../../Assets/Projects/yt-music.jpg";
@@ -46,7 +46,7 @@ const projects = [
 function Projects() {
   return (
     <Container id="projects" fluid className="project-section">
-      <Particle />
+      {/* <Particle /> */}
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
@@ -54,10 +54,10 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Row style={{ justifyContent: "center", gap: "0.5rem" }}>
           {
             projects.map(project => (
-              <Col key={project.title} md={6} className="project-card">
+              <Col key={project.title} xs={12} sm={10} lg={6} className="project-card">
                 <ProjectCard
                   {...project}
                 />
