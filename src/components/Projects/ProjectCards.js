@@ -12,7 +12,8 @@ import {
   DiMysql,
   DiHtml5,
   DiCss3Full,
-  DiGit
+  DiGit,
+  DiGithubBadge
 } from "react-icons/di";
 
 import {
@@ -23,7 +24,7 @@ import {
   SiHeroku,
   SiStyledcomponents,
   SiBootstrap,
-  SiRedux
+  SiRedux,
 } from "react-icons/si";
 
 
@@ -51,33 +52,36 @@ function ProjectCards(props) {
   return (
     <Card className="project-card-view glass project-div">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-      <Card.Body>
+      <Card.Body style={{padding: "5px 1rem 1.25rem", height: "fill"}}>
         <Card.Title className="purple">{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
-        <Card.Title className="purple">Tech Stack</Card.Title> 
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Card.Title className="purple" style={{marginBottom: "10px"}}>Tech Stack</Card.Title> 
+        <Row style={{ justifyContent: "center", paddingBottom: "10px", gap: "5px" }}>
           {
             props.stack?.map(s => (
-              <Col key={s} xs={4} md={1} className="tech-icons">
-                <div class="skill glass light">
+              <Col key={s} xs={1} md={1} className="tech-icons" style={{marginTop: "10px"}}>
+                <div className="skill glass light">
                   { map[s] }
                 </div>
               </Col>
             ))
           }
         </Row>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px", gap: "1rem" }} >
-          <Button variant="primary" xs={4} style={{width: "12rem"}} href={props.demo} target="_blank">
-            <BiLinkExternal /> &nbsp;
-              Demo
-          </Button>
-          <Col xs={1}></Col>
-          <Button variant="primary" xs={4} style={{width: "12rem"}} href={props.link} target="_blank">
-            <BiLinkExternal /> &nbsp;
-              View Project
-          </Button>
+        <Row style={{ justifyContent: "center", margin: "auto", marginTop: "5px", maxWidth: "25rem" }} >
+          <Col sm={6}>
+            <Button variant="primary" style={{maxWidth: "10rem", width: "100%", margin: "10px 0px"}} href={props.demo} target="_blank">
+              <BiLinkExternal size={20} /> &nbsp;
+                Demo
+            </Button>
+          </Col>
+          <Col sm={6}>
+            <Button variant="primary" style={{maxWidth: "10rem", width: "100%", margin: "10px 0px"}} href={props.link} target="_blank">
+              <DiGithubBadge size={25} style={{marginBottom: "1px" }} /> &nbsp;
+                View Code
+            </Button>
+          </Col>
         </Row>
       </Card.Body>
     </Card>

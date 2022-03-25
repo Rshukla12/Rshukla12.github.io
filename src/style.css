@@ -79,7 +79,7 @@ html {
 }
 
 .navbar {
-  position: fixed !important;
+  /* position: fixed !important; */
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
@@ -139,7 +139,7 @@ html {
 
 @media (max-width: 767px) {
   .navbar {
-    padding: 1rem 2rem !important;
+    /* padding: 1rem 2rem !important; */
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
   }
@@ -184,7 +184,7 @@ html {
   z-index: 1;
 }
 
-.navbar-nav .nav-item a::after {
+.navbar-nav .nav-item a::after, .main-resume::after {
   content: "";
   position: relative;
   display: block;
@@ -198,7 +198,7 @@ html {
   transition: all 0.3s ease-out 0s;
 }
 
-.navbar-nav .nav-item a:hover::after {
+.navbar-nav .nav-item a:hover::after, .main-resume:hover::after  {
   width: 100%;
 }
 
@@ -253,8 +253,8 @@ html {
 
 .home-section {
   position: relative;
-  z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  z-index: 0;
+  background-image: var(--image-gradient);
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
@@ -461,12 +461,12 @@ html {
   background-color: transparent !important;
   opacity: 1 !important;
   transition: all 0.5s ease 0s !important;
-  height: 100% !important;
+  height: fit-content !important;
 }
 .project-card-view:hover {
-  transform: scale(1.02) !important;
+  filter: brightness(1.02);
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  box-shadow: 0 4px 8px 12px rgba(129, 72, 144, 0.561) !important;
 }
 
 .blog-card {
@@ -570,9 +570,9 @@ html {
 }
 
 .tech-icons:hover {
-  transform: scale(1.05) !important;
+  /* transform: scale(1.02) !important; */
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  border: 1.7px solid rgba(197, 115, 230, 0.883) !important;
 }
 .tech-icon-images {
   padding: 20px !important;
@@ -708,7 +708,7 @@ p {
 
 .project-div {
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.3) !important;
-  max-width: 750px;
+  max-width: 550px;
   margin: 20px auto;
   flex-direction: column;
   justify-content: flex-start;
@@ -721,19 +721,43 @@ p {
 }
 
 .project-card:hover .glass {
-  backdrop-filter: blur(0px);
+  backdrop-filter: blur(5px);
 }
 
 .project-card .skill {
-  width: 3.5rem !important;
-  height: 3.5rem !important;
-  font-size: 2rem;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  font-size: 1.5rem;
+  margin: 5px;
 }
 
 .project-card .tech-icons {
-  width: 3rem !important;
-  height: 3rem !important;
-  min-height: 3rem !important;
-  min-width: 3rem !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  min-height: 2rem !important;
+  min-width: 2rem !important;
   padding: 0 !important;
+  margin: 0 5px !important;
+  font-size: 1.5rem !important;
+}
+
+.project-card .tech-icons:hover {
+  transform: scale(1.00) !important;
+  border: 1.7px solid rgba(197, 115, 230, 0.883) !important;
+}
+
+@media (max-width: 1000px) {
+  .home-content {
+    padding: 3rem 0 2rem !important;
+  }  
+}
+
+
+@media (max-width: 767px) {
+  .home-content {
+    padding: 0rem 0 2rem !important;
+  }  
+  .main-resume {
+    margin-top: 10% !important;
+  }
 }

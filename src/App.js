@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
+  Routes
 } from "react-router-dom";
 import "./style.css";
 import "./App.css";
@@ -29,8 +29,8 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <Routes>
-          <Route path="/:id" exact element={<Home />} />
-          <Route path="*" element={<Home />} />
+          <Route path="/:id" element={<Home />} />
+          <Route path="*" exact element={<Home />} />
         </Routes>
         <Footer />
       </div>
