@@ -25,7 +25,7 @@ function NavBar() {
     }
   }
 
-  // window.addEventListener("scroll", scrollHandler);
+  window.addEventListener("scroll", scrollHandler);
 
   return (
     <Navbar
