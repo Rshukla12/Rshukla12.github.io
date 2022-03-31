@@ -19,7 +19,7 @@ function Home() {
 
   useEffect(() => {
     if ( window ){
-      const eleHeight = id && document.getElementById(id)? document.getElementById(id).offsetTop : 0;
+      const eleHeight = id && document.getElementById(id) ? document.getElementById(id).offsetTop : 0;
       window.scrollTo(0, eleHeight || 0);
     }
   });
@@ -48,36 +48,6 @@ function Home() {
               >
                 <Type />
               </div>
-              {/* <Row style={{ justifyContent: "center", marginTop: "3rem", maxWidth: "20rem", paddingLeft: "3rem" }}>
-                <Col sm={6}>
-                  <Button
-                    variant="primary"
-                    style={{
-                      maxWidth: "10rem",
-                      width: "100%",
-                      margin: "10px 0px",
-                    }}
-                    href="https://drive.google.com/file/d/1-Y7JwX8lTOh9N6Xoq8UhBLFsiS138vQu/view?usp=sharing"
-                    target="_blank"
-                  >
-                    <CgFileDocument size={25} style={{ marginBottom: "2px", marginRight: "3px" }}/> Resume
-                  </Button>
-                </Col>
-                <Col sm={6}>
-                  <Button
-                    variant="primary"
-                    style={{
-                      maxWidth: "10rem",
-                      width: "100%",
-                      margin: "10px 0px",
-                    }}
-                    href="/#id"
-                    target="_blank"
-                  >
-                    <AiOutlineFundProjectionScreen size={25} style={{ marginBottom: "2px", marginRight: "3px" }}/>Projects
-                  </Button>
-                </Col>
-              </Row> */}
               <div className="resume navbar-nav">
                 <Nav.Item>
                   <Nav.Link
@@ -88,7 +58,7 @@ function Home() {
                       fontSize: "1.5rem"
                     }}
                     className="main-resume"
-                    href="https://drive.google.com/file/d/1-Y7JwX8lTOh9N6Xoq8UhBLFsiS138vQu/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1awOtW0hwzO0WjNUQba8mHZSDqlGWGjzr/view?usp=sharing"
                     target="_blank"
                     rel="noreferrer"
                   >

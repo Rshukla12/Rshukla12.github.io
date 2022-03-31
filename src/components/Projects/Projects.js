@@ -1,11 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
-// import Particle from "../Particle";
+import loadable from "@loadable/component";
+
 import Udemy from "../../Assets/Projects/udemy.jpg";
 import Meesho from "../../Assets/Projects/meesho.jpg";
 import YtMusic from "../../Assets/Projects/yt-music.jpg";
 import Airtable from "../../Assets/Projects/airtable.jpg";
+
+const ProjectCard = loadable(() => import("./ProjectCards"));
 
 const projects = [
   {
@@ -13,7 +15,7 @@ const projects = [
     title: "Udemy Clone",
     description: "Udemy is a platform that allows instructors to build online course and allows user to wishlist, add to cart, purchase, watch and review courses.",
     link: "https://github.com/anamikarec/udemy.com-project",
-    demo: "https://udemy-triage-project.netlify.app",
+    demo: "https://udemy-masai.netlify.app",
     stack: ["react", "redux", "mui", "node", "mongodb", "express", "git"]
   },
   {
@@ -46,7 +48,6 @@ const projects = [
 function Projects() {
   return (
     <Container id="projects" fluid className="project-section">
-      {/* <Particle /> */}
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
