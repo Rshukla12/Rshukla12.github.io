@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
-import Tilt from "react-parallax-tilt";
 
 function Home2() {
   return (
@@ -23,8 +22,8 @@ function Home2() {
               <br />
               My field of Interest's are building new &nbsp;
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in {" "}
+                <b className="purple">Web Technologies, Products </b> and
+                in {" "}
                 <b className="purple">
                   Data Structures and Algorithms.
                 </b>
@@ -41,14 +40,12 @@ function Home2() {
               </i>
               &nbsp; like
               <i>
-                <b className="purple"> React.js and Next.js</b>
+                <b className="purple"> React.js</b>
               </i>
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
-            </Tilt>
+            <img src={myImg} className="img-fluid" alt="avatar" />
           </Col>
         </Row>
       </Container>
