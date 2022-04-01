@@ -6,7 +6,7 @@ import Toolstack from "./Toolstack";
 
 function Skills() {
   return (
-    <Container id="skills" fluid className="about-section">
+    <Container id="skills" fluid className="about-section second-color">
       <h1 className="project-heading">
         Professional <strong className="purple">Skillset </strong>
       </h1>

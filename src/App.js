@@ -24,6 +24,7 @@ function App() {
   }, []);
 
   return (
+    <div className="App">
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
@@ -35,6 +36,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </div>
   );
 }
 
