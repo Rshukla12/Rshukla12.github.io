@@ -2,7 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { BiLinkExternal } from "react-icons/bi";
-import { Row, Col } from "react-bootstrap";
+
 import {
   DiJavascript1,
   DiReact,
@@ -50,39 +50,111 @@ const map = {
 
 function ProjectCards(props) {
   return (
-    <Card className="project-card-view glass project-div">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-      <Card.Body style={{padding: "5px 1rem 1.25rem", height: "fill"}}>
-        <Card.Title className="purple">{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
+    <Card className="project-card-view glass project-div" style={{ 
+      backgroundColor: "rgba(255, 255, 255, 0.05)",
+      border: "1px solid rgba(255, 255, 255, 0.1)",
+      borderRadius: "20px",
+      overflow: "hidden",
+      padding: "1rem",
+      transition: "all 0.3s ease",
+      backdropFilter: "blur(10px)"
+    }}>
+      <Card.Img 
+        variant="top" 
+        src={props.imgPath} 
+        alt="card-img" 
+        style={{ 
+          height: "250px", 
+          objectFit: "cover",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+          aspectRatio: "16/9"
+        }}
+      />
+      <Card.Body style={{padding: "2rem"}}>
+        <Card.Title className="purple" style={{ fontSize: "1.4rem", marginBottom: "1rem" }}>
+          {props.title}
+        </Card.Title>
+        <Card.Text style={{ 
+          textAlign: "justify", 
+          fontSize: "1rem", 
+          lineHeight: "1.6",
+          marginBottom: "1.5rem"
+        }}>
           {props.description}
         </Card.Text>
-        <Card.Title className="purple" style={{marginBottom: "10px"}}>Tech Stack</Card.Title> 
-        <Row style={{ justifyContent: "center", paddingBottom: "10px", gap: "5px" }}>
-          {
-            props.stack?.map(s => (
-              <Col key={s} xs={1} md={1} className="tech-icons" style={{marginTop: "10px"}}>
-                <div className="skill glass light">
-                  { map[s] }
-                </div>
-              </Col>
-            ))
-          }
-        </Row>
-        <Row style={{ justifyContent: "center", margin: "auto", marginTop: "5px", maxWidth: "25rem" }} >
-          <Col sm={6}>
-            <Button variant="primary" style={{maxWidth: "10rem", width: "100%", margin: "10px 0px"}} href={props.demo} target="_blank">
-              <BiLinkExternal size={20} /> &nbsp;
-                Demo
-            </Button>
-          </Col>
-          <Col sm={6}>
-            <Button variant="primary" style={{maxWidth: "10rem", width: "100%", margin: "10px 0px"}} href={props.link} target="_blank">
-              <DiGithubBadge size={25} style={{marginBottom: "1px" }} /> &nbsp;
-                View Code
-            </Button>
-          </Col>
-        </Row>
+        
+        <div style={{ marginBottom: "2rem" }}>
+          <div style={{ 
+            color: "#c770f0", 
+            fontWeight: "bold", 
+            marginBottom: "1rem",
+            fontSize: "1.1rem"
+          }}>
+            Tech Stack
+          </div>
+          <div style={{ 
+            display: "flex", 
+            flexWrap: "wrap", 
+            gap: "0.8rem",
+            justifyContent: "flex-start"
+          }}>
+            {
+              props.stack?.map(s => (
+                <span key={s} style={{
+                  display: "flex",
+                  alignItems: "center",
+                  padding: "0.3rem 0.6rem",
+                  backgroundColor: "rgba(199, 112, 240, 0.1)",
+                  borderRadius: "15px",
+                  fontSize: "0.8rem",
+                  color: "#c770f0",
+                  border: "1px solid rgba(199, 112, 240, 0.3)"
+                }}>
+                  {map[s]}
+                  <span style={{ marginLeft: "0.3rem" }}>{s}</span>
+                </span>
+              ))
+            }
+          </div>
+        </div>
+        
+        <div style={{ 
+          display: "flex", 
+          gap: "1.5rem",
+          justifyContent: "center"
+        }}>
+          <Button 
+            variant="primary" 
+            style={{
+              backgroundColor: "#c770f0",
+              border: "none",
+              padding: "0.6rem 1.2rem",
+              borderRadius: "20px",
+              fontSize: "0.9rem"
+            }} 
+            href={props.demo} 
+            target="_blank"
+          >
+            <BiLinkExternal size={16} /> &nbsp;
+            Demo
+          </Button>
+          <Button 
+            variant="primary" 
+            style={{
+              backgroundColor: "transparent",
+              border: "1px solid #c770f0",
+              color: "#c770f0",
+              padding: "0.6rem 1.2rem",
+              borderRadius: "20px",
+              fontSize: "0.9rem"
+            }} 
+            href={props.link} 
+            target="_blank"
+          >
+            <DiGithubBadge size={18} /> &nbsp;
+            Code
+          </Button>
+        </div>
       </Card.Body>
     </Card>
   );

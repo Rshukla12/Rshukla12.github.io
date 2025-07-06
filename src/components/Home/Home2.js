@@ -12,36 +12,27 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I love problem solving and programing
+              Senior Software Engineer with 3+ years in backend and distributed systems
               <br />
-              <br />I am fluent in languages like
+              <br />I specialize in technologies like
               <i>
-                <b className="purple"> Javascript and Python. </b>
+                <b className="purple"> Java, Kafka, Redis, MongoDB, Elasticsearch </b>
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              My expertise includes building &nbsp;
               <i>
-                <b className="purple">Web Technologies, Products </b> and
-                in {" "}
+                <b className="purple">Event-Driven Architectures, Vector Search Solutions </b> and
+                implementing {" "}
                 <b className="purple">
-                  Data Structures and Algorithms.
+                  AI-Driven Systems.
                 </b>
               </i>
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js</b>
-              </i>
+              I've led infrastructure migrations with zero downtime, reduced costs by 12%,
+              and implemented vector search frameworks improving accuracy by 15%.
+              Passionate about solving complex problems in distributed systems.
             </p>
           </Col>
           <Col md={4} className="myAvtar">

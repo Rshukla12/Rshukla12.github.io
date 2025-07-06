@@ -10,20 +10,23 @@ function AboutCard() {
           <p style={{ textAlign: "justify", fontSize: "1.5rem"}}>
             Hi Everyone, I am <span className="purple">RAVI SHUKLA </span>
             from <span className="purple"> Surat, India.</span>
-            <br />I am an aspiring full stack developer and currently pursuing B.E. in Electronics and Communication from Government Engineering College, Surat.
+            <br />I am a Senior Software Engineer with 3+ years of experience in backend and distributed systems, currently working at Tracxn in Bangalore.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            My key achievements include:
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Exploring/Learning new technologies
+              <ImPointRight /> Reduced infrastructure costs by <strong>12%</strong> through Elasticsearch optimization
             </li>
             <li className="about-activity">
-              <ImPointRight /> Listening Music
+              <ImPointRight /> Migrated Elasticsearch infrastructure with <strong>zero downtime</strong>
             </li>
             <li className="about-activity">
-              <ImPointRight /> Watching Anime
+              <ImPointRight /> Implemented event-driven architecture supporting <strong>20M+ daily events</strong>
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Deployed vector search framework improving accuracy by <strong>15%</strong>
             </li>
           </ul>
         </blockquote>

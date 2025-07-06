@@ -13,6 +13,8 @@ import { CgFileDocument } from "react-icons/cg";
 
 const Skills = loadable(() => import("../Skills/Skills"));
 const Projects = loadable(() => import("../Projects/Projects"));
+const Experience = loadable(() => import("../Experience/Experience"));
+const FindMeOn = loadable(() => import("../FindMeOn/FindMeOn"));
 
 function Home() {
   const { id } = useParams();
@@ -58,7 +60,7 @@ function Home() {
                       fontSize: "1.5rem"
                     }}
                     className="main-resume"
-                    href="https://drive.google.com/file/d/1awOtW0hwzO0WjNUQba8mHZSDqlGWGjzr/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1Iay33h8ptLjsY1oBQ2CnrPrSGcgzdnrI/view?usp=share_link"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -76,8 +78,10 @@ function Home() {
       </Container>
       <Home2 />
       <About />
+      <Experience />
       <Skills />
       <Projects />
+      <FindMeOn />
       </>
   );
 }

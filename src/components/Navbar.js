@@ -71,6 +71,15 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/experience"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Experience
+              </Nav.Link>
+            </Nav.Item>
             
             <Nav.Item>
               <Nav.Link
@@ -97,7 +106,19 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://drive.google.com/file/d/1awOtW0hwzO0WjNUQba8mHZSDqlGWGjzr/view?usp=sharing"
+                as={Link}
+                to="/education"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> Education
+              </Nav.Link>
+            </Nav.Item>
+
+
+
+            <Nav.Item>
+              <Nav.Link
+                href="https://drive.google.com/file/d/1Iay33h8ptLjsY1oBQ2CnrPrSGcgzdnrI/view?usp=share_link"
                 target="_blank"
                 rel="noreferrer"
               >

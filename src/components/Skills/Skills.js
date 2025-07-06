@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Github from "./Github";
 import Techstack from "./Techstack";
-import Toolstack from "./Toolstack";
 
 function Skills() {
   return (
@@ -12,14 +11,6 @@ function Skills() {
       </h1>
 
       <Techstack />
-
-      <h1 className="project-heading">
-        <strong className="purple">
-          Tools
-        </strong>{" "}
-        I use
-      </h1>
-      <Toolstack />
 
       <Github />
     </Container>
