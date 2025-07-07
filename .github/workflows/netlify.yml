@@ -11,19 +11,32 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    - run: npm i
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      id: cache-deps
+      with:
+        path: |
+          **/node_modules
+          ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Install dependencies
+      if: steps.cache-deps.outputs.cache-hit != 'true'
+      run: npm ci
     
     - run: unset CI
 
@@ -34,7 +47,6 @@ jobs:
         echo "/* /index.html 200" > ./build/_redirects
         
     - name: Netlify Deploy
-      # uses: jsmrcaga/action-netlify-deploy@v1.7.1
       uses: netlify/actions/cli@master
       
       env:
