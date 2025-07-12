@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/linkedin-profile.jpg";
 
 function Home2() {
   return (
@@ -36,11 +36,12 @@ function Home2() {
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <img src={myImg} className="img-fluid" alt="avatar" />
+            <img src={myImg} className="img-fluid" alt="avatar" style={{ borderRadius: "1.5rem", boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)" }} />
           </Col>
         </Row>
       </Container>
     </Container>
   );
 }
+
 export default Home2;
