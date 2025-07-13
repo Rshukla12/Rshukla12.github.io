@@ -26,7 +26,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -r https://$GH_TOKEN@github.com/rshukla12/rshukla12.github.io.git"
+
   },
   "eslintConfig": {
     "extends": [
