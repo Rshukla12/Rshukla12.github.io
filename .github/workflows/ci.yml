@@ -49,4 +49,4 @@ jobs:
     - name: Deploy
       run: npm run deploy
       env:
-        GH_TOKEN: ${{ secrets.secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
