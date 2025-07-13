@@ -14,11 +14,6 @@ jobs:
         node-version: [18.x]
 
     steps:
-    - name: Set Git identity
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
     - name: Checkout repository
       uses: actions/checkout@v3
 
@@ -47,6 +42,11 @@ jobs:
       run: npm run build
 
     - name: Deploy
-      run: npm run deploy
+      run: |
+        git config --global user.name $user_name
+        git config --global user.email $user_email
+        git remote set-url origin https://${github_token}@github.com/${repository}
+        npm run deploy
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        repository: ${{ github.repository }}
