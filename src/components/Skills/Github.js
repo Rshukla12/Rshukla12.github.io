@@ -9,12 +9,15 @@ function Github() {
     // Fetch GitHub contributions data
     const fetchContributions = async () => {
       try {
-        const response = await fetch('https://api.github.com/users/rshukla12/events');
-        const data = await response.json();
-        
-        // Process the data to create a simple contribution visualization
-        const contributionData = processContributions(data);
-        setContributions(contributionData);
+        const usernames = ["rshukla12", "ravi-shukla-1"];
+        const allData = await Promise.all(
+          usernames.map(username =>
+            fetch(`https://api.github.com/users/${username}/events`).then(res => res.json())
+          )
+        );
+        // Merge the data
+        const merged = mergeContributions(allData[0], allData[1]);
+        setContributions(merged);
       } catch (error) {
         console.error('Error fetching GitHub data:', error);
         // Fallback to mock data
@@ -27,24 +30,30 @@ function Github() {
     fetchContributions();
   }, []);
 
-  const processContributions = (data) => {
-    // Process GitHub events to create contribution data
-    const contributions = [];
+  // Merge two event arrays into a date->count map
+  const mergeContributions = (data1, data2) => {
     const today = new Date();
-    
+    const dateMap = {};
+    // Helper to add events to map
+    const addEvents = (data) => {
+      data.forEach(event => {
+        const date = new Date(event.created_at).toISOString().split('T')[0];
+        dateMap[date] = (dateMap[date] || 0) + 1;
+      });
+    };
+    addEvents(data1);
+    addEvents(data2);
+    // Build 365-day array
+    const contributions = [];
     for (let i = 0; i < 365; i++) {
       const date = new Date(today);
       date.setDate(date.getDate() - i);
-      
-      const dayData = data.filter(event => {
-        const eventDate = new Date(event.created_at);
-        return eventDate.toDateString() === date.toDateString();
-      });
-      
+      const dateStr = date.toISOString().split('T')[0];
+      const count = dateMap[dateStr] || 0;
       contributions.unshift({
-        date: date.toISOString().split('T')[0],
-        count: dayData.length,
-        level: dayData.length > 0 ? Math.min(dayData.length, 4) : 0
+        date: dateStr,
+        count,
+        level: count > 0 ? Math.min(count, 4) : 0
       });
     }
     

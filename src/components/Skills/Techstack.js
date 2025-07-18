@@ -21,7 +21,6 @@ import {
   SiGit,
   SiGithub,
   SiDocker,
-  SiGroovy,
   SiPostman
 } from "react-icons/si";
 
@@ -29,10 +28,6 @@ const languages = [
   {
     icon: <DiJava />,
     label: "Java",
-  },
-  {
-    icon: <SiGroovy />,
-    label: "Groovy",
   },
   {
     icon: <DiJavascript1 />,
@@ -71,6 +66,10 @@ const infrastructure = [
   {
     icon: <SiElasticsearch />,
     label: "Elasticsearch",
+  },
+  {
+    icon: <SiElasticsearch />,
+    label: "ELK",
   }
 ];
 
@@ -117,10 +116,10 @@ function Techstack() {
       </Row>
       <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
-          Frameworks
+          Infrastructure
         </h1>
         {
-          frameworks.map(stack => (
+          infrastructure.map(stack => (
             <Col key={stack.label} xs={4} md={2} className="tech-icons">
               <div className="skill glass light">
                 {stack.icon}
@@ -132,10 +131,10 @@ function Techstack() {
       </Row>
       <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
-          Infrastructure
+          Frameworks
         </h1>
         {
-          infrastructure.map(stack => (
+          frameworks.map(stack => (
             <Col key={stack.label} xs={4} md={2} className="tech-icons">
               <div className="skill glass light">
                 {stack.icon}
