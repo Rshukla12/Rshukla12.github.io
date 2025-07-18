@@ -55,7 +55,7 @@ Visit: [https://rshukla12.github.io](https://rshukla12.github.io)
 - **Email**: rshuklawork@gmail.com
 - **Phone**: +91-7383540234
 - **GitHub**: [github.com/Rshukla12](https://github.com/Rshukla12)
-- **LinkedIn**: [linkedin.com/in/ravishukla12](https://linkedin.com/in/ravishukla12)
+- **LinkedIn**: [linkedin.com/in/rshukla12](https://linkedin.com/in/rshukla12)
 - **LeetCode**: [leetcode.com/Rshukla12](https://leetcode.com/Rshukla12)
 
 ## 📄 License

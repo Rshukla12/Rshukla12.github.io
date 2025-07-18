@@ -38,8 +38,8 @@ function Contact() {
     {
       icon: <AiOutlineLinkedin />,
       label: "LinkedIn",
-      value: "linkedin.com/in/ravishukla12",
-      link: "https://linkedin.com/in/ravishukla12"
+      value: "linkedin.com/in/rshukla12",
+      link: "https://linkedin.com/in/rshukla12"
     }
   ];
 
