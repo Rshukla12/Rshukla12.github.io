@@ -1,9 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Container } from "react-bootstrap";
 import { ImPointRight } from "react-icons/im";
 
 function Experience() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const hideTimeout = useRef(null);
+
+  const handleMouseEnter = (index) => {
+    if (hideTimeout.current) {
+      clearTimeout(hideTimeout.current);
+      hideTimeout.current = null;
+    }
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    hideTimeout.current = setTimeout(() => {
+      setHoveredIndex(null);
+    }, 300);
+  };
   
   const experiences = [
     {
@@ -104,8 +119,8 @@ function Experience() {
                       maxWidth: window.innerWidth <= 768 ? "400px" : "none",
                       margin: window.innerWidth <= 768 ? "0 auto" : "0"
                     }}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}>
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={handleMouseLeave}>
                       
                       {/* Gradient border */}
                       <div style={{
@@ -185,8 +200,8 @@ function Experience() {
                     transform: hoveredIndex === index ? "scale(1.3)" : "scale(1)",
                     boxShadow: hoveredIndex === index ? "0 0 20px rgba(199, 112, 240, 0.5)" : "none"
                   }}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)} />
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave} />
                 )}
                 
                 {/* Right side content - shown for odd indices */}
@@ -209,8 +224,8 @@ function Experience() {
                         cursor: "pointer",
                         transition: "all 0.3s ease"
                       }}
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}>
+                      onMouseEnter={() => handleMouseEnter(index)}
+                      onMouseLeave={handleMouseLeave}>
                         
                         {/* Gradient border */}
                         <div style={{
@@ -294,7 +309,17 @@ function Experience() {
             zIndex: "1000",
             maxHeight: window.innerWidth <= 768 ? "60vh" : "40vh",
             overflowY: "auto"
-          }}>
+          }}
+          onMouseEnter={() => {
+            if (hideTimeout.current) {
+              clearTimeout(hideTimeout.current);
+              hideTimeout.current = null;
+            }
+          }}
+          onMouseLeave={() => {
+            setHoveredIndex(null);
+          }}
+          >
             {hoveredIndex !== null && (
               <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
                 <div style={{

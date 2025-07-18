@@ -19,13 +19,20 @@ import {
   SiElasticsearch,
   SiAmazonaws,
   SiGit,
-  SiGithub
+  SiGithub,
+  SiDocker,
+  SiGroovy,
+  SiPostman
 } from "react-icons/si";
 
 const languages = [
   {
     icon: <DiJava />,
     label: "Java",
+  },
+  {
+    icon: <SiGroovy />,
+    label: "Groovy",
   },
   {
     icon: <DiJavascript1 />,
@@ -73,41 +80,30 @@ const tools = [
     label: "AWS EC2",
   },
   {
+    icon: <SiDocker />,
+    label: "Docker",
+  },
+  {
     icon: <SiGit />,
     label: "Git",
   },
   {
     icon: <SiGithub />,
     label: "GitHub",
-  }
-];
-
-const frontendStacks = [
-  {
-    icon: <DiReact />,
-    label: "React",
   },
   {
-    icon: <SiMaterialui />,
-    label: "Material UI",
-  },
-  {
-    icon: <DiHtml5/>,
-    label: "HTML",
-  },
-  {
-    icon: <DiCss3Full />,
-    label: "CSS",
+    icon: <SiPostman />,
+    label: "Postman",
   }
 ];
 
 function Techstack() {
   return (
     <>
-      <h1 className="project-heading">
-        Languages
-      </h1>
       <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+      <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
+          Languages
+        </h1>
         {
           languages.map(stack => (
             <Col key={stack.label} xs={4} md={2} className="tech-icons">
@@ -119,11 +115,10 @@ function Techstack() {
           ))
         }
       </Row>
-      
-      <h1 className="project-heading">
-        Frameworks
-      </h1>
       <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+      <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
+          Frameworks
+        </h1>
         {
           frameworks.map(stack => (
             <Col key={stack.label} xs={4} md={2} className="tech-icons">
@@ -135,11 +130,10 @@ function Techstack() {
           ))
         }
       </Row>
-      
-      <h1 className="project-heading">
-        Infrastructure
-      </h1>
       <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+      <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
+          Infrastructure
+        </h1>
         {
           infrastructure.map(stack => (
             <Col key={stack.label} xs={4} md={2} className="tech-icons">
@@ -151,11 +145,10 @@ function Techstack() {
           ))
         }
       </Row>
-      
-      <h1 className="project-heading">
-        Tools
-      </h1>
       <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+      <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
+          Tools
+        </h1>
         {
           tools.map(stack => (
             <Col key={stack.label} xs={4} md={2} className="tech-icons">
@@ -167,23 +160,6 @@ function Techstack() {
           ))
         }
       </Row>
-      
-      <h1 className="project-heading">
-        Frontend
-      </h1>
-      <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-        {
-          frontendStacks.map(stack => (
-            <Col key={stack.label} xs={4} md={2} className="tech-icons">
-              <div className="skill glass light">
-                {stack.icon}
-                <p>{stack.label}</p>
-              </div>
-            </Col>
-          ))
-        }
-      </Row>
-      
     </>
   );
 }
