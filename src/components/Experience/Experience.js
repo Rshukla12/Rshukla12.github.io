@@ -27,11 +27,11 @@ function Experience() {
       location: "Bangalore, India",
       period: "May 2024 – Present",
       achievements: [
-        "Reduced infrastructure costs by 12% by tuning Elasticsearch queries",
-        "Migrated Elasticsearch (7.17 to 8.4) infrastructure with zero downtime",
-        "Implemented event-driven architecture with Kafka, supporting 20M+ daily events",
-        "Developed framework for POC with LLM and vector search, enabling 20% faster search capabilities",
-        "Deployed vector search framework in production, improving search accuracy by 15%"
+        "Achieved 20% cost reduction by managing resources, optimizing disk size for Elasticsearch.",
+        "Executed zero-downtime migration of Elasticsearch (7.17 to 8.4), ensuring seamless operations.",
+        "Enabled scalable pipelines by streaming 20M+ daily events via Kafka-MongoDB integration.",
+        "Implemented LLM and vector search framework, accelerating search capabilities by 20%.",
+        "Deployed production-ready vector search, boosting accuracy by 15%."
       ]
     },
     {
@@ -40,9 +40,9 @@ function Experience() {
       location: "Bangalore, India",
       period: "May 2022 – May 2024",
       achievements: [
-        "Migrated 15+ libraries from Groovy to Java across 2 teams, enhancing code maintainability",
-        "Integrated Redis caching layer in 3 critical data pipeline paths, reducing latency by 50%",
-        "Upgraded MongoDB clusters and identified and fixed a bug in SOP"
+        "Enhanced code maintainability by migrating 15+ libraries from Groovy to Java across 2 teams.",
+        "Slashed latency by 50% by integrating Redis caching in 3 critical data pipelines.",
+        "Upgraded MongoDB clusters (v5.0.13 to v6.0.3), resolving critical production bugs and improving reliability."
       ]
     },
     {
@@ -51,8 +51,8 @@ function Experience() {
       location: "Surat, India",
       period: "Feb 2022 – Apr 2022",
       achievements: [
-        "Developed Result Portal API with mail verification using Node.js and Express",
-        "Built Crypto Trading APIs integrating Binance and Tron for 1K+ daily transactions"
+        "Built Crypto Trading APIs, integrating Binance and Tron for 1K+ daily transactions.",
+        "Delivered Result Portal API with mail verification, enabling secure user access."
       ]
     }
   ];

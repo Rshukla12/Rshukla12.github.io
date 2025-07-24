@@ -17,21 +17,25 @@ import {
   SiGit,
   SiGithub,
   SiDocker,
-  SiPostman
+  SiPostman,
+  SiSpringboot,
+  SiReact,
+  SiLogstash,
+  SiKibana
 } from "react-icons/si";
 
 const languages = [
   {
     icon: <DiJava />,
-    label: "Java",
+    label: "Java (expert)",
   },
   {
     icon: <DiJavascript1 />,
-    label: "JavaScript",
+    label: "JavaScript (intermediate)",
   },
   {
     icon: <DiPython />,
-    label: "Python",
+    label: "Python (basic)",
   }
 ];
 
@@ -43,10 +47,30 @@ const frameworks = [
   {
     icon: <SiExpress />,
     label: "Express",
+  },
+  {
+    icon: <SiSpringboot />,
+    label: "Spring Boot",
+  },
+  {
+    icon: <SiReact />,
+    label: "React",
   }
 ];
 
 const infrastructure = [
+  {
+    icon: <SiElasticsearch />,
+    label: "Elasticsearch",
+  },
+  {
+    icon: <SiLogstash />,
+    label: "Logstash",
+  },
+  {
+    icon: <SiKibana />,
+    label: "Kibana",
+  },
   {
     icon: <SiApachekafka />,
     label: "Kafka",
@@ -58,21 +82,13 @@ const infrastructure = [
   {
     icon: <DiMongodb />,
     label: "MongoDB",
-  },
-  {
-    icon: <SiElasticsearch />,
-    label: "Elasticsearch",
-  },
-  {
-    icon: <SiElasticsearch />,
-    label: "ELK",
   }
 ];
 
 const tools = [
   {
     icon: <SiAmazonaws />,
-    label: "AWS EC2",
+    label: "AWS",
   },
   {
     icon: <SiDocker />,
